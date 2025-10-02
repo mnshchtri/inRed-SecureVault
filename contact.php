@@ -45,6 +45,7 @@ if(isset($_POST['submit'])){
                 <a href="index.php" class="px-4 text-gray-800 hover:text-red-600">Home</a>
                 <a href="contact.php" class="px-4 text-gray-800 hover:text-red-600">Contact</a>
                 <?php if(isset($_SESSION['username'])) : ?>
+                    <a href="filestorage.php" class="px-4 text-gray-800 hover:text-red-600">File Storage</a>
                     <a href="profile.php" class="px-4 text-gray-800 hover:text-red-600">Profile</a>
                     <a href="logout.php" class="px-4 text-gray-800 hover:text-red-600">Logout</a>
                 <?php else : ?>

@@ -1,0 +1,10 @@
+# Ignore uploaded files and directories
+/uploads/
+
+# Ignore database configuration file (if it contains sensitive credentials)
+config/db.php
+
+# Ignore any other sensitive files or directories as needed
+# .env
+# *.log
+# temp/

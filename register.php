@@ -28,8 +28,14 @@ session_start();
             </a>
             <div>
                 <a href="index.php" class="px-4 text-gray-800 hover:text-red-600">Home</a>
-                <a href="login.php" class="px-4 text-gray-800 hover:text-red-600">Login</a>
+                <?php if(isset($_SESSION['username'])) : ?>
+                    <a href="filestorage.php" class="px-4 text-gray-800 hover:text-red-600">File Storage</a>
+                    <a href="profile.php" class="px-4 text-gray-800 hover:text-red-600">Profile</a>
+                    <a href="logout.php" class="px-4 text-gray-800 hover:text-red-600">Logout</a>
+                <?php else : ?>
+                    <a href="login.php" class="px-4 text-gray-800 hover:text-red-600">Login</a>
                 <a href="register.php" class="px-4 text-gray-800 hover:text-red-600">Register</a>
+                <?php endif; ?>
             </div>
         </nav>
     </header>
