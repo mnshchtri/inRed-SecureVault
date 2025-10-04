@@ -7,7 +7,7 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>InRed SecureVault</title>
+    <title>SecureVault X</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
     <style>
@@ -24,7 +24,7 @@ session_start();
     <header class="fixed top-0 left-0 right-0 z-20 glassy-nav shadow-md">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="index.php">
-                <img src="images/logo.png" alt="InRed SecureVault Logo" class="h-16">
+                <img src="images/logo.png" alt="SecureVault X Logo" class="h-16">
             </a>
             <div>
                 <a href="index.php" class="px-4 text-gray-800 hover:text-red-600">Home</a>
@@ -59,8 +59,8 @@ session_start();
                         <img src="images/about-us.png" alt="About Us" class="rounded-lg shadow-lg">
                     </div>
                     <div class="md:w-1/2 md:pl-12 mt-8 md:mt-0">
-                        <h2 class="text-4xl font-bold mb-4">About InRed SecureVault</h2>
-                        <p class="text-gray-600 leading-relaxed">Founded in 2010, InRed SecureVault has been a leader in providing robust and secure digital solutions. We are a team of passionate security professionals dedicated to safeguarding your valuable data. Our mission is to offer advanced and effective file storage solutions, ensuring your digital assets are always protected and accessible only to you.</p>
+                        <h2 class="text-4xl font-bold mb-4">About SecureVault X</h2>
+                        <p class="text-gray-600 leading-relaxed">Founded in 2010, SecureVault X has been a leader in providing robust and secure digital solutions. We are a team of passionate security professionals dedicated to safeguarding your valuable data. Our mission is to offer advanced and effective file storage solutions, ensuring your digital assets are always protected and accessible only to you.</p>
                     </div>
                 </div>
                 <div class="mt-20">
@@ -68,17 +68,17 @@ session_start();
                     <div class="flex flex-wrap justify-center">
                         <div class="w-full md:w-1/3 p-4 text-center">
                             <img src="images/team-member-1.png" alt="Team Member 1" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg">
-                            <h4 class="text-xl font-bold">John Doe</h4>
+                            <h4 class="text-xl font-bold">Ramesh Kumar Singh</h4>
                             <p class="text-gray-600">CEO & Founder</p>
                         </div>
                         <div class="w-full md:w-1/3 p-4 text-center">
                             <img src="images/team-member-2.png" alt="Team Member 2" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg">
-                            <h4 class="text-xl font-bold">Jane Smith</h4>
+                            <h4 class="text-xl font-bold">Smriti Rai</h4>
                             <p class="text-gray-600">Head of Security</p>
                         </div>
                         <div class="w-full md:w-1/3 p-4 text-center">
                             <img src="images/team-member-3.png" alt="Team Member 3" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg">
-                            <h4 class="text-xl font-bold">Peter Jones</h4>
+                            <h4 class="text-xl font-bold">Amit Kumar</h4>
                             <p class="text-gray-600">Lead Penetration Tester</p>
                         </div>
                     </div>
@@ -117,7 +117,7 @@ session_start();
 
         <section id="features" class="py-20 bg-white">
             <div class="container mx-auto px-6">
-                <h2 class="text-4xl font-bold text-center mb-12">Why Choose InRed SecureVault?</h2>
+                <h2 class="text-4xl font-bold text-center mb-12">Why Choose SecureVault X?</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <div class="bg-gray-50 rounded-lg shadow-lg p-8 text-center">
                         <svg class="w-16 h-16 mx-auto mb-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
@@ -144,7 +144,7 @@ session_start();
             <div class="flex flex-wrap">
                 <div class="w-full md:w-1/4 mb-8 md:mb-0">
                     <a href="index.php">
-                        <img src="images/logo.png" alt="InRed SecureVault Logo" class="h-16 mb-4">
+                        <img src="images/logo.png" alt="SecureVault X Logo" class="h-16 mb-4">
                     </a>
                     <p class="text-gray-400">Your trusted partner in data security.</p>
                 </div>
@@ -176,7 +176,7 @@ session_start();
                 </div>
             </div>
             <div class="mt-8 border-t border-gray-700 pt-8 text-center">
-                <p>&copy; 2025 InRed SecureVault. All Rights Reserved.</p>
+                <p>&copy; 2025 SecureVault X. All Rights Reserved.</p>
             </div>
         </div>
     </footer>

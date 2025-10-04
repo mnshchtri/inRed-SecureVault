@@ -7,7 +7,7 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - InRed SecureVault</title>
+    <title>Login - SecureVault X</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
     <style>
@@ -24,7 +24,7 @@ session_start();
     <header class="fixed top-0 left-0 right-0 z-20 glassy-nav shadow-md">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="index.php">
-                <img src="images/logo.png" alt="InRed SecureVault Logo" class="h-16">
+                <img src="images/logo.png" alt="SecureVault X Logo" class="h-16">
             </a>
             <div>
                 <a href="index.php" class="px-4 text-gray-800 hover:text-red-600">Home</a>
@@ -65,7 +65,7 @@ session_start();
             <div class="flex flex-wrap">
                 <div class="w-full md:w-1/4 mb-8 md:mb-0">
                     <a href="index.php">
-                        <img src="images/logo.png" alt="InRed SecureVault Logo" class="h-16 mb-4">
+                        <img src="images/logo.png" alt="SecureVault X Logo" class="h-16 mb-4">
                     </a>
                     <p class="text-gray-400">Your trusted partner in data security.</p>
                 </div>
@@ -97,7 +97,7 @@ session_start();
                 </div>
             </div>
             <div class="mt-8 border-t border-gray-700 pt-8 text-center">
-                <p>&copy; 2025 InRed SecureVault. All Rights Reserved.</p>
+                <p>&copy; 2025 SecureVault X. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
