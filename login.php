@@ -42,7 +42,7 @@ session_start();
 
     <main class="container mx-auto px-6 py-32">
         <div class="max-w-md mx-auto bg-white rounded-lg shadow-md p-8">
-            <h2 class="text-2xl font-bold mb-6 text-center">Secure Login</h2>
+            <h2 class="text-2xl font-bold mb-6 text-center">SecureVault X Login</h2>
             <?php if(isset($_GET['error'])) : ?>
                 <p class="text-center mb-4 text-red-500"><?php echo $_GET['error']; ?></p>
             <?php endif; ?>
