@@ -17,6 +17,7 @@ session_start();
         .glassy-nav {
             background-color: rgba(255, 255, 255, 0.8);
             backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
     </style>
 </head>
@@ -86,9 +87,9 @@ session_start();
             </div>
         </section>
 
-        <section id="services" class="py-20 bg-gray-50">
+        <section id="services" class="py-20 bg-gray-50" style="background-image: url('images/footer-bg.png'); background-size: cover; background-position: center;">
             <div class="container mx-auto px-6">
-                <h2 class="text-4xl font-bold text-center mb-12">Our Secure Storage Solutions</h2>
+                <h2 class="text-4xl font-bold text-center mb-12 text-white">Our Secure Storage Solutions</h2>
                 <div class="flex flex-wrap -mx-4">
                     <div class="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
                         <div class="bg-white rounded-lg shadow-lg p-8 text-center">
@@ -115,9 +116,9 @@ session_start();
             </div>
         </section>
 
-        <section id="features" class="py-20 bg-white">
+        <section id="features" class="py-20 bg-white" style="background-image: url('images/whychoose-bg.png'); background-size: cover; background-position: center;">
             <div class="container mx-auto px-6">
-                <h2 class="text-4xl font-bold text-center mb-12">Why Choose SecureVault X?</h2>
+                <h2 class="text-4xl font-bold text-center mb-12 text-white">Why Choose SecureVault X?</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <div class="bg-gray-50 rounded-lg shadow-lg p-8 text-center">
                         <svg class="w-16 h-16 mx-auto mb-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>

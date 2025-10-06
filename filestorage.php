@@ -101,13 +101,17 @@ if(isset($_GET['delete']) && isset($_GET['file_id'])){
         body {
             font-family: 'Inter', sans-serif;
         }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
         .glassy-nav {
             background-color: rgba(255, 255, 255, 0.8);
             backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
     </style>
 </head>
-<body class="bg-gray-100 text-gray-800">
+<body class="bg-gray-100 text-gray-800" style="background-image: url('images/filestorage.png'); background-size: cover; background-position: center;">
     <header class="fixed top-0 left-0 right-0 z-20 glassy-nav shadow-md">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="index.php">
@@ -191,46 +195,6 @@ if(isset($_GET['delete']) && isset($_GET['file_id'])){
         </div>
     </main>
 
-    <footer class="bg-gray-800 text-white py-12">
-        <div class="container mx-auto px-6">
-            <div class="flex flex-wrap">
-                <div class="w-full md:w-1/4 mb-8 md:mb-0">
-                    <a href="index.php">
-                        <img src="images/logo.png" alt="SecureVault X Logo" class="h-12 mb-4">
-                    </a>
-                    <p class="text-gray-400">Your trusted partner in data security.</p>
-                </div>
-                <div class="w-full md:w-1/4 mb-8 md:mb-0">
-                    <h4 class="text-lg font-bold mb-4">Links</h4>
-                    <ul>
-                        <li class="mb-2"><a href="#about" class="text-gray-400 hover:text-white">About Us</a></li>
-                        <li class="mb-2"><a href="#services" class="text-gray-400 hover:text-white">Services</a></li>
-                        <li class="mb-2"><a href="#features" class="text-gray-400 hover:text-white">Features</a></li>
-                    </ul>
-                </div>
-                <div class="w-full md:w-1/4 mb-8 md:mb-0">
-                    <h4 class="text-lg font-bold mb-4">Follow Us</h4>
-                    <ul>
-                        <li class="mb-2"><a href="#" class="text-gray-400 hover:text-white">Twitter</a></li>
-                        <li class="mb-2"><a href="#" class="text-gray-400 hover:text-white">LinkedIn</a></li>
-                        <li class="mb-2"><a href="#" class="text-gray-400 hover:text-white">GitHub</a></li>
-                    </ul>
-                </div>
-                <div class="w-full md:w-1/4">
-                    <h4 class="text-lg font-bold mb-4">Subscribe</h4>
-                    <p class="text-gray-400 mb-4">Stay up to date with our latest news and offers.</p>
-                    <form>
-                        <div class="flex">
-                            <input type="email" class="w-full px-3 py-2 border rounded-l-lg text-gray-700 focus:outline-none focus:border-red-500" placeholder="Your Email">
-                            <button type="submit" class="bg-red-600 text-white font-bold py-2 px-4 rounded-r-lg hover:bg-red-700">Subscribe</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-            <div class="mt-8 border-t border-gray-700 pt-8 text-center">
-                <p>&copy; 2025 SecureVault X. All Rights Reserved.</p>
-            </div>
-        </div>
-    </footer>
+    
 </body>
 </html>
