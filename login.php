@@ -24,6 +24,7 @@ session_start();
         <div class="max-w-md w-full bg-white rounded-lg shadow-md p-8">
             <div class="flex justify-between items-center mb-6">
                 <a href="index.php" class="text-gray-600 hover:text-red-600">Home</a>
+                <a href="register.php" class="text-gray-600 hover:text-red-600">Register</a>
             </div>
             <h2 class="text-2xl font-bold mb-6 text-center">SecureVault X Login</h2>
             <?php if(isset($_GET['error'])) : ?>
