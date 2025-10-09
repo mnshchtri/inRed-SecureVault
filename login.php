@@ -20,7 +20,7 @@ session_start();
     </style>
 </head>
 <body class="bg-gray-100 text-gray-800" style="background-image: url('images/login-bg.png'); background-size: cover; background-position: center;">
-    <main class="flex items-center justify-center h-screen">
+    <main class="flex items-center justify-center h-screen px-4">
         <div class="max-w-md w-full bg-white rounded-lg shadow-md p-8">
             <div class="flex justify-between items-center mb-6">
                 <a href="index.php" class="text-gray-600 hover:text-red-600">Home</a>

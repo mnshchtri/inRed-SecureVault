@@ -40,9 +40,9 @@ if($result->num_rows > 0){
     <header class="fixed top-0 left-0 right-0 z-20 glassy-nav shadow-md">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="index.php">
-                <img src="images/logo.png" alt="SecureVault X Logo" class="h-16">
+                <img src="images/logo.png" alt="SecureVault X Logo" class="h-12 md:h-16">
             </a>
-            <div>
+            <div class="hidden md:flex items-center space-x-4">
                 <a href="index.php" class="px-4 text-gray-800 hover:text-red-600">Home</a>
                 <?php if(isset($_SESSION['username'])) : ?>
                     <a href="filestorage.php" class="px-4 text-gray-800 hover:text-red-600">File Storage</a>
@@ -50,12 +50,27 @@ if($result->num_rows > 0){
                 <a href="logout.php" class="px-4 text-gray-800 hover:text-red-600">Logout</a>
                 <?php endif; ?>
             </div>
+            <div class="md:hidden flex items-center">
+                <button id="mobile-menu-button" class="text-gray-800 hover:text-red-600 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
         </nav>
+        <div id="mobile-menu" class="hidden md:hidden">
+            <a href="index.php" class="block px-4 py-2 text-gray-800 hover:bg-red-100">Home</a>
+            <?php if(isset($_SESSION['username'])) : ?>
+                <a href="filestorage.php" class="block px-4 py-2 text-gray-800 hover:bg-red-100">File Storage</a>
+                <a href="profile.php" class="block px-4 py-2 text-gray-800 hover:bg-red-100">Profile</a>
+                <a href="logout.php" class="block px-4 py-2 text-gray-800 hover:bg-red-100">Logout</a>
+            <?php endif; ?>
+        </div>
     </header>
 
-    <main class="container mx-auto px-6 py-32">
-        <div class="max-w-2xl mx-auto bg-white rounded-lg shadow-md p-8">
-            <h2 class="text-3xl font-bold mb-6 text-center text-gray-800">User Profile</h2>
+    <main class="container mx-auto px-4 md:px-6 py-32">
+        <div class="max-w-2xl mx-auto bg-white rounded-lg shadow-md p-6 md:p-8">
+            <h2 class="text-2xl md:text-3xl font-bold mb-6 text-center text-gray-800">User Profile</h2>
 
             <?php
             $message = '';
@@ -201,6 +216,13 @@ if($result->num_rows > 0){
         </div>
     </main>
 
-    
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
 </body>
 </html>

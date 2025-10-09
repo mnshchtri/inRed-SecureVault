@@ -115,9 +115,9 @@ if(isset($_GET['delete']) && isset($_GET['file_id'])){
     <header class="fixed top-0 left-0 right-0 z-20 glassy-nav shadow-md">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="index.php">
-                <img src="images/logo.png" alt="SecureVault X Logo" class="h-16">
+                <img src="images/logo.png" alt="SecureVault X Logo" class="h-12 md:h-16">
             </a>
-            <div>
+            <div class="hidden md:flex items-center space-x-4">
                 <a href="index.php" class="px-4 text-gray-800 hover:text-red-600">Home</a>
                 <a href="blog.php" class="px-4 text-gray-800 hover:text-red-600">Blog</a>
                 <a href="contact.php" class="px-4 text-gray-800 hover:text-red-600">Contact</a>
@@ -130,13 +130,33 @@ if(isset($_GET['delete']) && isset($_GET['file_id'])){
                     <a href="register.php" class="px-4 text-gray-800 hover:text-red-600">Register</a>
                 <?php endif; ?>
             </div>
+            <div class="md:hidden flex items-center">
+                <button id="mobile-menu-button" class="text-gray-800 hover:text-red-600 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
         </nav>
+        <div id="mobile-menu" class="hidden md:hidden">
+            <a href="index.php" class="block px-4 py-2 text-gray-800 hover:bg-red-100">Home</a>
+            <a href="blog.php" class="block px-4 py-2 text-gray-800 hover:bg-red-100">Blog</a>
+            <a href="contact.php" class="block px-4 py-2 text-gray-800 hover:bg-red-100">Contact</a>
+            <?php if(isset($_SESSION['username'])) : ?>
+                <a href="filestorage.php" class="block px-4 py-2 text-gray-800 hover:bg-red-100">File Storage</a>
+                <a href="profile.php" class="block px-4 py-2 text-gray-800 hover:bg-red-100">Profile</a>
+                <a href="logout.php" class="block px-4 py-2 text-gray-800 hover:bg-red-100">Logout</a>
+            <?php else : ?>
+                <a href="login.php" class="block px-4 py-2 text-gray-800 hover:bg-red-100">Login</a>
+                <a href="register.php" class="block px-4 py-2 text-gray-800 hover:bg-red-100">Register</a>
+            <?php endif; ?>
+        </div>
     </header>
 
-    <main class="container mx-auto px-6 py-32">
-        <div class="max-w-3xl mx-auto bg-white rounded-xl shadow-2xl p-10 space-y-10 border border-gray-200">
-            <h2 class="text-4xl font-extrabold mb-4 text-center text-gray-800">Your Secure File Storage</h2>
-            <p class="text-center text-lg text-gray-600 mb-8">Upload and manage your personal files securely. We support JPG, JPEG, PNG, GIF, PDF, DOC, DOCX, & TXT files.</p>
+    <main class="container mx-auto px-4 md:px-6 py-32">
+        <div class="max-w-3xl mx-auto bg-white rounded-xl shadow-2xl p-6 md:p-10 space-y-10 border border-gray-200">
+            <h2 class="text-3xl md:text-4xl font-extrabold mb-4 text-center text-gray-800">Your Secure File Storage</h2>
+            <p class="text-center text-md md:text-lg text-gray-600 mb-8">Upload and manage your personal files securely. We support JPG, JPEG, PNG, GIF, PDF, DOC, DOCX, & TXT files.</p>
 
             <?php 
             if ($message) { echo "<div class='bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative mb-4' role='alert'>" . $message . "</div>"; }
@@ -155,7 +175,7 @@ if(isset($_GET['delete']) && isset($_GET['file_id'])){
                             file:text-sm file:font-semibold
                             file:bg-red-50 file:text-red-700
                             hover:file:bg-red-100
-                            cursor-pointer focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                            cursor:pointer focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
                             required>
                     </div>
                     <button type="submit" name="upload" class="w-full bg-red-600 text-white font-bold py-3 px-4 rounded-lg hover:bg-red-700 transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">Upload File</button>
@@ -174,14 +194,14 @@ if(isset($_GET['delete']) && isset($_GET['file_id'])){
 
                         if($files_result->num_rows > 0){
                             while($file = $files_result->fetch_assoc()){
-                                echo "<li class='p-4 flex items-center justify-between hover:bg-gray-50 transition duration-150 ease-in-out'>";
-                                echo "    <div class='flex-1 min-w-0'>";
+                                echo "<li class='p-4 flex flex-col md:flex-row items-start md:items-center justify-between hover:bg-gray-50 transition duration-150 ease-in-out'>";
+                                echo "    <div class='flex-1 min-w-0 mb-4 md:mb-0'>";
                                 echo "        <p class='text-lg font-medium text-gray-900 truncate'>" . htmlspecialchars($file['filename']) . "</p>";
                                 echo "        <p class='text-sm text-gray-500'>Uploaded: " . date("M d, Y H:i", strtotime($file['upload_time'])) . "</p>";
                                 echo "    </div>";
-                                echo "    <div class='ml-4 flex-shrink-0 flex space-x-3'>";
-                                echo "        <a href='" . htmlspecialchars($file['filepath']) . "' class='inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-150 ease-in-out'>View</a>";
-                                echo "        <a href='filestorage.php?delete=true&file_id=" . $file['id'] . "' class='inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 transition duration-150 ease-in-out' onclick=\"return confirm('Are you sure you want to delete this file?');\">Delete</a>";
+                                echo "    <div class='ml-0 md:ml-4 flex-shrink-0 flex space-x-3 w-full md:w-auto'>";
+                                echo "        <a href='" . htmlspecialchars($file['filepath']) . "' class='flex-1 md:flex-none inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-150 ease-in-out'>View</a>";
+                                echo "        <a href='filestorage.php?delete=true&file_id=" . $file['id'] . "' class='flex-1 md:flex-none inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 transition duration-150 ease-in-out' onclick=\"return confirm('Are you sure you want to delete this file?');\">Delete</a>";
                                 echo "    </div>";
                                 echo "</li>";
                             }
@@ -195,6 +215,13 @@ if(isset($_GET['delete']) && isset($_GET['file_id'])){
         </div>
     </main>
 
-    
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
 </body>
 </html>
